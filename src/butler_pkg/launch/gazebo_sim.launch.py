@@ -5,7 +5,7 @@ from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 # IMPORTANT: Replace 'my_cafe.world' with the exact name of your world file!
-WORLD_FILE_NAME = '/home/melvin/butler_ws/src/butler_pkg/worlds/cafe_world.world' 
+WORLD_FILE_NAME = '/home/melvin/butler_ws/src/butler_pkg/worlds/new_cafe_world_main' 
 
 def generate_launch_description():
 

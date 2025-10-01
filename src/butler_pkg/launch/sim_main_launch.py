@@ -24,7 +24,7 @@ def launch_setup(context):
     gazebo_params_file = os.path.join(pkg_butler, 'config', 'gazebo_params.yaml')
     twist_mux_param_file = os.path.join(pkg_butler, 'config', "twist_mux.yaml")
     rviz_config_file = os.path.join(pkg_butler, 'config', 'main.rviz')
-    world_path = os.path.join(pkg_butler, 'worlds', 'new_cafe_world_main.world')
+    world_path = os.path.join(pkg_butler, 'worlds', 'cafe_world.world')
 
     # --- 2. Included Launches ---
     
@@ -123,7 +123,7 @@ def generate_launch_description():
         ),
         DeclareLaunchArgument(
             name='world_name',
-            default_value='new_cafe_world_main.world',
+            default_value='cafe_world.world',
             description='The name of the Gazebo world file to load'
         ),
         
