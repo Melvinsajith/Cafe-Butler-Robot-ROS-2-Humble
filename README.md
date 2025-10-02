@@ -26,7 +26,7 @@ Logs of all robot actions for traceability.
 
 🚀 Getting Started
 1. Install Dependencies
-# ROS 2 (Humble/Foxy recommended)
+# ROS 2 (Humble recommended)
 sudo apt install ros-humble-desktop
 
 # Python deps
