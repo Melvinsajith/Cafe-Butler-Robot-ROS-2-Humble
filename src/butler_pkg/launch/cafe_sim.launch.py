@@ -10,7 +10,7 @@ from launch.substitutions import LaunchConfiguration
 # but keep the original package name ('butler_pkg') for file path resolution.
 PACKAGE_NAME = 'butler_pkg'      # <-- Name of your local ROS 2 package
 ENTITY_NAME = 'restaurant_robot' # <-- New name for your spawned robot entity
-WORLD_FILE_NAME = 'cafe_world.world' # <-- New hardcoded world file name
+WORLD_FILE_NAME = 'new_cafe.world' # <-- New hardcoded world file name
 
 
 def launch_setup(context):
@@ -24,7 +24,7 @@ def launch_setup(context):
     gazebo_params_file = os.path.join(pkg_butler, 'config', 'gazebo_params.yaml')
     twist_mux_param_file = os.path.join(pkg_butler, 'config', "twist_mux.yaml")
     rviz_config_file = os.path.join(pkg_butler, 'config', 'main.rviz')
-    world_path = os.path.join(pkg_butler, 'worlds', 'new_cafe_world_main.world')
+    world_path = os.path.join(pkg_butler, 'worlds', 'new_cafe.world')
 
     # --- 2. Included Launches ---
     
