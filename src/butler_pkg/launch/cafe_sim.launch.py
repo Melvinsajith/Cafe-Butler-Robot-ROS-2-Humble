@@ -23,7 +23,7 @@ def launch_setup(context):
     rsp_launch_path = os.path.join(pkg_butler, 'launch', 'robot_pu.launch.py')
     gazebo_params_file = os.path.join(pkg_butler, 'config', 'gazebo_params.yaml')
     twist_mux_param_file = os.path.join(pkg_butler, 'config', "twist_mux.yaml")
-    rviz_config_file = os.path.join(pkg_butler, 'config', 'main.rviz')
+    # rviz_config_file = os.path.join(pkg_butler, 'config', 'main.rviz')
     world_path = os.path.join(pkg_butler, 'worlds', 'new_cafe.world')
 
     # --- 2. Included Launches ---
@@ -73,14 +73,14 @@ def launch_setup(context):
     )
 
     # RVIZ Node
-    rviz_node = Node(
-        package='rviz2',
-        executable='rviz2',
-        name='rviz2',
-        output='screen',
-        arguments=['-d', rviz_config_file],
-        parameters=[{'use_sim_time': True}] # Passed as Python Boolean
-    )
+    # rviz_node = Node(
+    #     package='rviz2',
+    #     executable='rviz2',
+    #     name='rviz2',
+    #     output='screen',
+    #     arguments=['-d', rviz_config_file],
+    #     parameters=[{'use_sim_time': True}] # Passed as Python Boolean
+    # )
 
     # Controller Spawners
     controller_manager_pkg = 'controller_manager'
@@ -105,7 +105,6 @@ def launch_setup(context):
         gazebo,
         spawn_entity,
         twist_mux,
-        rviz_node,
         diff_drive_spawner,
         joint_broad_spawner,
     ]
